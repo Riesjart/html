@@ -888,12 +888,12 @@ class FormBuilder {
 			return $this->old($name);
 		}
 
+		if ( ! is_null($value)) return $value;
+		
 		if (isset($this->model))
 		{
 			return $this->getModelValueAttribute($name);
-		}
-
-		if ( ! is_null($value)) return $value;
+		}		
 	}
 
 	/**
